@@ -4,8 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>bulb toggler</title>
+    <style>
+        .img{
+            height: 100px;
+            width: 200px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
 </head>
 <body>
-    <img>
+    <img src="bulboff.png" id="bulb-img" class="img"><br/><br/>
+    <button onclick="toggle()">Toggle bulb</button>
+    <script>
+      let  cstate=false
+      bulb = document.getElementById("bulb-img")
+      function toggle(){
+        if(cstate==false){
+            cstate=true
+            bulb.src="C:\Users\aditi\Desktop\bulb-toggler\bulbon .png"
+        }
+        else{
+            bulb.src="bulboff.png"
+            cstate=false
+        }
+      }
+
+    </script>
 </body>
 </html>
