@@ -6,27 +6,46 @@
     <title>bulb toggler</title>
     <style>
         .img{
-            height: 100px;
-            width: 200px;
+            height: 200px;
+            width: 230px;
             display: block;
             margin-left: auto;
             margin-right: auto;
+            margin-top: 100px;
+        }
+        .btn{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 7px;
+            font-size: large;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            cursor: pointer;
+            background-color:#ffff99 ;
+        }
+        .btn:hover{
+            box-shadow: 5px 5px 2px 2px black;
         }
     </style>
 </head>
 <body>
     <img src="bulboff.png" id="bulb-img" class="img"><br/><br/>
-    <button onclick="toggle()">Toggle bulb</button>
+    <button onclick="toggle()" class="btn">Toggle bulb</button>
     <script>
-      let  cstate=false
-      bulb = document.getElementById("bulb-img")
+        let  cstate=false
+         bulb = document.getElementById("bulb-img")
+    
       function toggle(){
+       
+        console.log("done")
         if(cstate==false){
             cstate=true
-            bulb.src="C:\Users\aditi\Desktop\bulb-toggler\bulbon .png"
+            bulb.src='bulbonn.png'
         }
         else{
-            bulb.src="bulboff.png"
+            bulb.src='bulboff.png'
             cstate=false
         }
       }
